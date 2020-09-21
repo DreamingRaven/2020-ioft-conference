@@ -1,22 +1,50 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage{xcolor}
+\usepackage{graphicx}
+\graphicspath{ {./src/img/} }
 
 \usetheme{Boadilla}
-\title{Fully Homomorphic Encryption, the secret breakthrough technology.}
+\usecolortheme{rose}
+\beamerdefaultoverlayspecification{<+->}
+
+\title{Fully Homomorphic Encryption; The Secret Breakthrough Technology.}
 \author{George Onoufriou, Georgios Leontidis}
 \date{\today}
 
 \begin{document}
 
-  \definecolor{TXT}{RGB}{238,238,238} % #EEEEEE
-  \definecolor{BG}{RGB}{68,68,68} % #444
+  % \definecolor{TXT}{RGB}{238,238,238} % #EEEEEE
+  % \definecolor{BG}{RGB}{68,68,68} % #444
+  %
+  % \setbeamercolor{background canvas}{bg=BG}
+  % \color{TXT}
 
-  \setbeamercolor{background canvas}{bg=BG}
-  \color{TXT}
   \frame{\titlepage}
 
-  \begin{frame}{A white frame}
-    some text
-  \end{frame}
+  \section{Intro}
+
+    \begin{frame}{Abstract}
+      Fully Homomorphic Encryption (FHE)
+    \end{frame}
+
+    \begin{frame}{Introduction}
+      \includegraphics[width=0.5\linewidth]{data.png}
+    \end{frame}
+
+  \section{Summary}
+
+    \begin{frame}{Conclusion}
+      \begin{itemize}
+        \item a
+      \end{itemize}
+    \end{frame}
+
+  \section{Bib}
+
+    \begin{frame}[allowframebreaks]
+      \frametitle{References}
+      \bibliographystyle{unsrt}
+      \bibliography{./src/fhe.bib}%must have no space after ,
+    \end{frame}
 
 \end{document}
