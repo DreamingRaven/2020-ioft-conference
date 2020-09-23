@@ -98,7 +98,7 @@
         \begin{column}{0.5\textwidth}
           \begin{itemize}
             \item There is a problem though, that activation has a divide!
-            \item Thats ok, lets approximate.
+            \item Thats ok, lets approximate. \cite{cryptoeprint:2018:462}
             \item Approximation works well as a polynomial between -5 and 5
           \end{itemize}
         \end{column}
@@ -128,6 +128,8 @@
         Ciphertext $*$ Ciphertext & $0.277$*                                                             & -                                                                  \\
         Ciphertext $*$ Plaintext  & $0.0500$*                                                            & -
         \end{tabular}
+      \caption{Table of operation time complexity locally (without HTTP requests) and remoteley (with HTTP requests to API). Time is for the whole convolutional filter thus more than one encrypted vector is involved Time includes other operations E.G to decrypt, encryption must first occur.}
+      \label{table:complexity}
       \end{table}
     \end{frame}
 
