@@ -5,7 +5,7 @@
 
 \usetheme{Boadilla}
 \usecolortheme{rose}
-\beamerdefaultoverlayspecification{<+->}
+% \beamerdefaultoverlayspecification{<+->}
 
 \title{The \textit{Secret} Breakthrough Technology}
 \author{George Onoufriou, Paul Mayfield, Georgios Leontidis}
@@ -47,7 +47,6 @@
           \includegraphics[width=0.8\linewidth]{gentry.png}
         \end{column}
         \begin{column}{0.5\textwidth}
-          Further:\\[.2cm]
           \begin{itemize}
             \item "Holy grail of encryption"
             \item Arbitrary computational depth on ciphertext
@@ -62,16 +61,13 @@
     \begin{frame}{Deep Learning}
       \begin{columns}
         \begin{column}{0.5\textwidth}
-          \includegraphics[width=0.8\linewidth]{gentry.png}
+          \includegraphics[width=1\linewidth]{neuron.png}
         \end{column}
         \begin{column}{0.5\textwidth}
-          Further:\\[.2cm]
           \begin{itemize}
             \item A subset of machine learning, which seeks to use neural networks to learn the distribution of data, without manual feature engineering.
             \item State-of-the-art in almost all machine learning tasks (Image recognition, Classification, sequence generation, etc)
-            \item Quantum decryption resistant ciphertext
-            \item Abelian group operations ${+n,+(-n),*n}$ on ciphertext
-            \item Unable to compute non ableian operations such as division
+            \item Usually a large computational depth, due to layers and layers of neurons and activation functions.
           \end{itemize}
         \end{column}
       \end{columns}
@@ -82,22 +78,61 @@
     \begin{frame}{Deep Learning $+$ Fully Homomorphic Encryption}
       \begin{columns}
         \begin{column}{0.5\textwidth}
-          \includegraphics[width=0.8\linewidth]{gentry.png}
+          \includegraphics[width=1\linewidth]{neuron.png}
+          \includegraphics[width=1\linewidth]{desmos.png}
         \end{column}
         \begin{column}{0.5\textwidth}
-          Further:\\[.2cm]
           \begin{itemize}
-            \item "Holy grail of encryption"
-            \item Arbitrary computational depth on ciphertext
-            \item Quantum decryption resistant ciphertext
-            \item Abelian group operations ${+n,+(-n),*n}$ on ciphertext
-            \item Unable to compute non ableian operations such as division
+            \item There is a problem though, that activation has a divide!
+            \item Thats ok, lets approximate.
+            \item Approximation works well as a polynomial between -5 and 5
           \end{itemize}
         \end{column}
       \end{columns}
     \end{frame}
 
+    \begin{frame}{Deep Learning $+$ Fully Homomorphic Encryption}
+      Example 1D convolutional neural network used in our pipeline with approximation \\
+      \includegraphics[width=1\linewidth]{encrypted_cnn.png}
+    \end{frame}
+
+    \begin{frame}{As a pipeline}
+      \includegraphics[width=0.9\linewidth]{nextgen.pdf}
+    \end{frame}
+
   \section{Results}
+
+    \begin{frame}{Computational Complexity}
+      \begin{table}[]
+        \begin{tabular}{l|ll}
+        Operation               & \begin{tabular}[c]{@{}l@{}}Locally \\ (seconds 3.s.f)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Remotely\\ (seconds 3.s.f)\end{tabular} \\ \hline
+        Encryption              & 0.0136                                                             & 0.454                                                              \\
+        Decryption              & 0.0330*                                                            & 1.14*                                                              \\
+        Inference               &                                                                    & 3.13** *                                                           \\
+        Ciphertext + Ciphertext & 0.287*                                                             & -                                                                  \\
+        Ciphertext + Plaintext  & 0.0480*                                                            & -                                                                  \\
+        Ciphertext * Ciphertext & 0.277*                                                             & -                                                                  \\
+        Ciphertext * Plaintext  & 0.0500*                                                            & -
+        \end{tabular}
+      \end{table}
+    \end{frame}
+
+  \section{Future Direction}
+
+    \begin{frame}{Future Plans}
+      \begin{columns}
+        \begin{column}{0.5\textwidth}
+          \includegraphics[width=1\linewidth]{neuron.png}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+          \begin{itemize}
+            \item There is a problem though, that activation has a divide!
+            \item Thats ok, lets approximate.
+            \item Approximation works well as a polynomial between -5 and 5
+          \end{itemize}
+        \end{column}
+      \end{columns}
+    \end{frame}
 
   \section{Summary}
 
