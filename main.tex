@@ -106,13 +106,13 @@
       \begin{table}[]
         \begin{tabular}{l|ll}
         Operation               & \begin{tabular}[c]{@{}l@{}}Locally \\ (seconds 3.s.f)\end{tabular} & \begin{tabular}[c]{@{}l@{}}Remotely\\ (seconds 3.s.f)\end{tabular} \\ \hline
-        Encryption              & 0.0136                                                             & 0.454                                                              \\
-        Decryption              & 0.0330*                                                            & 1.14*                                                              \\
-        Inference               &                                                                    & 3.13** *                                                           \\
-        Ciphertext + Ciphertext & 0.287*                                                             & -                                                                  \\
-        Ciphertext + Plaintext  & 0.0480*                                                            & -                                                                  \\
-        Ciphertext * Ciphertext & 0.277*                                                             & -                                                                  \\
-        Ciphertext * Plaintext  & 0.0500*                                                            & -
+        Encryption              & $0.0136$                                                             & $0.454$                                                              \\
+        Decryption              & $0.0330$*                                                            & $1.14$*                                                              \\
+        Inference               & $X$                                                                   & $3.13$** *                                                           \\
+        Ciphertext $+$ Ciphertext & $0.287$*                                                             & -                                                                  \\
+        Ciphertext $+$ Plaintext  & $0.0480$*                                                            & -                                                                  \\
+        Ciphertext $*$ Ciphertext & $0.277$*                                                             & -                                                                  \\
+        Ciphertext $*$ Plaintext  & $0.0500$*                                                            & -
         \end{tabular}
       \end{table}
     \end{frame}
@@ -126,9 +126,9 @@
         \end{column}
         \begin{column}{0.5\textwidth}
           \begin{itemize}
-            \item There is a problem though, that activation has a divide!
-            \item Thats ok, lets approximate.
-            \item Approximation works well as a polynomial between -5 and 5
+            \item Improve on the pipeline; faster, wider, more variety in networks.
+            \item Tackling the training problem; improve results using  transfer learning to minimize learning.
+            \item Accelerate more computations onto GPU.
           \end{itemize}
         \end{column}
       \end{columns}
