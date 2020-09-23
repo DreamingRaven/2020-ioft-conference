@@ -1,11 +1,12 @@
 \documentclass[aspectratio=169]{beamer}
 \usepackage{xcolor}
+\usepackage{tikz}
 \usepackage{graphicx}
 \graphicspath{ {./src/img/} }
 
 \usetheme{Boadilla}
 \usecolortheme{rose}
-% \beamerdefaultoverlayspecification{<+->}
+% \beamerdefaultoverlayspecification{<+->} % this will turn it into slides
 
 \title{NEXTGEN}
 \subtitle{The \textit{Secret} Breakthrough Technology}
@@ -20,7 +21,18 @@
   % \setbeamercolor{background canvas}{bg=BG}
   % \color{TXT}
 
-  \frame{\titlepage}
+  \begin{frame}
+    \titlepage
+    \begin{center}
+      \includegraphics[width=0.3\linewidth]{ioft.png}
+    \end{center}
+  \end{frame}
+
+\addtobeamertemplate{frametitle}{}{%
+\begin{tikzpicture}[remember picture,overlay]
+\node[anchor=north east,yshift=2pt] at (current page.north east) {\includegraphics[height=0.8cm]{ioft.png}};
+\end{tikzpicture}}
+
 
   \section{Intro}
 
@@ -45,7 +57,8 @@
     \begin{frame}{Fully Homomorphic Encryption}
       \begin{columns}
         \begin{column}{0.5\textwidth}
-          \includegraphics[width=0.8\linewidth]{gentry.png}
+          \includegraphics[width=0.75\linewidth]{gentry.png}
+          \cite{gentry2009fully}
         \end{column}
         \begin{column}{0.5\textwidth}
           \begin{itemize}
@@ -98,7 +111,7 @@
     \end{frame}
 
     \begin{frame}{As a pipeline}
-      \includegraphics[width=0.9\linewidth]{nextgen.pdf}
+      \includegraphics[width=0.85\linewidth]{nextgen.pdf}
     \end{frame}
 
   \section{Results}
@@ -172,9 +185,6 @@
           \begin{itemize}
             \item This project received funding from the UKRI-EPSRC grant “The Internet of Food Things” (EP/R045127/1)
           \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-          \includegraphics[width=0.5\linewidth]{ioft.png}
         \end{column}
       \end{columns}
     \end{frame}
