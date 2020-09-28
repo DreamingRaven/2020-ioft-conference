@@ -2,6 +2,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{graphicx}
+\usepackage{pdfpages} % for including pdfs
 \graphicspath{ {./src/img/} }
 
 \usetheme{Boadilla}
@@ -38,6 +39,14 @@
 
     \begin{frame}{Contents}
       \tableofcontents
+    \end{frame}
+
+    \begin{frame}
+      \includegraphics[page=1,scale=0.4]{paul.pdf}
+    \end{frame}
+
+    \begin{frame}
+      \includegraphics[page=2,scale=0.4]{paul.pdf}
     \end{frame}
 
     \begin{frame}{History}
